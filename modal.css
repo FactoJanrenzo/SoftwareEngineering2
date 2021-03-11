@@ -1,0 +1,131 @@
+/*modal styling*/
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-open-1-content, /*add lab modal*/
+#modal-open-2-content, /*edit lab modal*/
+#modal-open-3-content, /*add pc modal*/
+#modal-open-4-content, /*add emp modal*/
+#modal-open-5-content, /*edit emp modal*/
+#modal-open-6-content, /*edit emp modal*/
+#modal-open-7-content, /*walk-in-res modal*/
+#modal-open-8-content, /*add-customer-acc modal*/
+#modal-open-9-content  /*edit-customer-acc modal*/
+{ 
+    display: none;
+}
+
+.modal-active {
+    display: flex !important;
+}
+
+.modal-content {
+    width: 400px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.modal-content-with-table {
+    width: 400px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.modal-search-date {
+    margin: 10px 0;
+}
+
+.modal-content input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.modal-close {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    opacity: 0.5;
+}
+
+.pcnum-header {
+    background-color: var(--bluegreen);
+}
+
+.add-pc-user {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.modal-table {
+    margin: 5px 0;
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #d9d9d9;
+}
+
+.modal-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.5rem;
+    text-align: left;
+}
+
+.modal-table thead{
+    background-color: var(--bluegreen);
+}
+
+.modal-table thead th, .modal-table td{
+    padding: 3px 5px;
+}
+
+.modal-table tbody{
+    background-color: #d9d9d9;
+}
+
+.modal-time-btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.modal-time-btn button{
+    background-color: var(--darkcolor);
+    color: var(--lightcolor);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.modal-time-btn button:hover{
+    opacity: 0.8;
+}
+
+
+
+
+
