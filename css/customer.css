@@ -1,0 +1,263 @@
+@import 'modal.css';
+@import 'btns.css';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bluegreen: #1FA698;
+    --lightcolor: #f2f2f2;
+    --darkcolor: #373740;
+    --hovercolor:#232329;
+    --blue: #0088cc;
+    --red: #cc0000;
+    --toggleactive:#009900;
+    --orange: #F27E63;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #cccccc;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+select {
+    outline: 0;
+    cursor: pointer; 
+}
+
+/*layouting*/
+
+#customer-main-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr auto;
+    grid-template-areas: 
+        "customer-main-headbar"
+        "customer-main-navbar"
+        "customer-main-content"
+    ;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+#customer-main-headbar {
+    grid-area: customer-main-headbar;
+}
+#customer-main-navbar {
+    grid-area: customer-main-navbar;
+}
+#customer-main-content {
+    grid-area: customer-main-content;
+}
+
+.customer-headbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bluegreen);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--darkcolor);
+    padding: 0 10px;
+}
+
+.navbar-links {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-links a {
+    padding: 15px 10px;
+    color: var(--lightcolor);
+    height: 100%;
+}
+
+.navbar-links a:hover {
+    opacity: 0.8;
+    background-color: var(--hovercolor);
+}
+
+.customer-current-page {
+    border-bottom: 5px solid var(--bluegreen);
+}
+
+.customer-content {
+    padding: 10px;
+}
+
+.customer-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.customer-cards-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.customer-cards-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-computer-vacant {
+    display: flex;
+    align-items: center;
+}
+
+.search-computer-vacant-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.search-computer-vacant-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.computers-wrapper {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    gap: 3px;
+}
+
+.computer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid var(--darkcolor);
+    gap: 10px;
+}
+
+.computer-wrapper i{
+    font-size: 3rem;
+}
+
+.computer-wrapper a{
+    font-size: 1.5rem;
+}
+
+.customer-reservations-wrapper {
+    margin-top: 10px;
+    width: 100%;
+    height: 380px;
+    padding: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #d9d9d9;
+}
+
+.customer-reservation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.customer-reservation-item img {
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.customer-reservation-options {
+    display: flex;
+    gap: 5px;
+}
+
+@media (max-width: 1024px) {
+    #customer-main-container {
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr auto;
+        grid-template-areas: 
+            "customer-main-headbar"
+            "customer-main-navbar"
+            "customer-main-content"
+        ;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    .computers-wrapper {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    #customer-main-container {
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr auto;
+        grid-template-areas: 
+            "customer-main-headbar"
+            "customer-main-navbar"
+            "customer-main-content"
+        ;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    .customer-cards-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .search-computer-vacant {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    .computers-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 3px;
+    }
+    .customer-reservation-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1 0px;
+        padding: 10px;
+        margin-bottom: 5px;
+        background-color: white;
+        border: 1px solid black;
+    }
+}

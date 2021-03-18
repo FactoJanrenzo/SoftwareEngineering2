@@ -18,7 +18,8 @@
 #modal-open-6-content, /*edit emp modal*/
 #modal-open-7-content, /*walk-in-res modal*/
 #modal-open-8-content, /*add-customer-acc modal*/
-#modal-open-9-content  /*edit-customer-acc modal*/
+#modal-open-9-content, /*edit-customer-acc modal*/
+#modal-open-10-content /*make reservation modal*/
 { 
     display: none;
 }

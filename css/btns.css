@@ -26,16 +26,7 @@
 .btn-resList {
     text-align: center;
     padding: 3px 10px;
-    background-color: var(--bluegreen);
-    border-radius: 5px;
-    color: var(--lightcolor);
-    font-size: 1.5rem;
-}
-
-.btn-timein {
-    text-align: center;
-    padding: 3px 10px;
-    background-color: var(--bluegreen);
+    background-color: var(--darkcolor);
     border-radius: 5px;
     color: var(--lightcolor);
     font-size: 1.5rem;
@@ -50,10 +41,19 @@
     font-size: 1.2rem;
 }
 
+.btn-reserve {
+    display: flex;
+    padding: 10px;
+    background-color: var(--darkcolor);
+    border-radius: 5px;
+    color: var(--lightcolor);
+    font-size: 1rem;
+}
+
 .btn-edit:hover, 
 .btn-delete:hover, 
 .btn-add:hover, 
-.btn-timein:hover, 
+.btn-reserve:hover, 
 .btn-resList:hover, 
 .btn-search:hover {
     opacity: 0.8;
